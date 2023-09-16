@@ -7,7 +7,7 @@
 body {
     background: #D79C94;
 }
-.gbox {
+.qbox {
     background: #CBC9BC;
     width: 90%;
     max-width: 600px;
@@ -15,7 +15,7 @@ body {
     border-radius: 10px;
     padding: 30px;
 }
-.gbox h1{
+.qbox h1{
     font-weight: 25px;
     color: #6d3823;
     font-weight: 600;
@@ -31,7 +31,7 @@ body {
     font-weight: 600; 
     
 }
-.tap {
+.btn {
     background: #CBC9BC;
     color: #6d3823;
     font-weight: 600;
@@ -42,5 +42,9 @@ body {
     text-align: left;
     border-radius: 4px;
     cursor: pointer;
-
+    transition: all;
+}
+.btn:hover {
+    background: #eeb3ade3;
+    color: #492516;
 }
