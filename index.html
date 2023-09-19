@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linked in assets below -->
     <link rel='stylesheet' type='text/css' href='assets/style.css'/>
     <title>Code Quiz Challenge</title>
-
+    
 </head>
 <body>
+    <!-- header displaying links to view highscore and timer -->
+    <!-- could not figure out how to put timer on the right side so i commented it out  -->
+    <!-- <header> -->
+        <!-- <div class="unsure"> -->
+            <!-- <div class="col-md-4" id="viewScore">View Highscores</div> -->
+            <!-- <div class="col-md-2">Time: <span id="timer">0</span></div> -->
+        <!-- </div> -->
+
+    <!-- </header> -->
+    
+
+    
+<!-- qbox for question box -->
     <div class="qbox">
         <h1>Java Quiz</h1>
-        <div class="question">
-            <h2>What is JavaScript?</h2>
-            <div id="responses">
-                <button class="btn">Makes websites pretty</button>
-                <button class="btn">It's a virus</button>
-                <button class="btn">Makes webpage interactive</button>
-                <button class="btn">It's the antivirus thing</button>
+        <!-- qna for q&a, encompassing question and answers -->
+        <div class="qna">
+            <h2 id="question">What is JavaScript?</h2>
+            <div id="answers">
+                <button class="btn">Answer here</button>
+                <button class="btn">Answer here</button>
+                <button class="btn">Answer here</button>
+                <button class="btn">Answer here</button>
             </div>
             <button id="nextbtn">Next</button>
         </div>
     </div>
+    <script src="assets/script.js"></script>
 </body>
 </html>
