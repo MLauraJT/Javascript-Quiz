@@ -72,3 +72,13 @@ body {
     display: block;
     align-items: center;
 }
+
+.correct {
+    background: #6D7647;
+    color: #351b0f;
+}
+
+.incorrect {
+    background: #C2785B;
+    color: #351b0f;
+}
