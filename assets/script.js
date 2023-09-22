@@ -1,3 +1,7 @@
+var startButton = document.getElementById("start");
+var qBox = document.getElementById("qbox");
+
+
 var questions = [
     {
         question: "What is Java Script?",
@@ -54,6 +58,10 @@ var currentQuestionIndex = 0;
 var score = 0;
 
 function startQuiz(){
+    console.log("Start quiz");
+    startButton.setAttribute("class", "hide");
+    
+    qBox.setAttribute("class", "qbox")
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
@@ -92,6 +100,7 @@ function selectAnswer(e){
     var isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
         selectedBtn.classList.add("correct");
+        score++;
     }else{
         selectedBtn.classList.add("incorrect");
     }
@@ -101,8 +110,47 @@ function selectAnswer(e){
         }
         button.disabled = true;
     });
-    nextButton.style.display = "block"
+    nextButton.style.display = "block";
 }
 
-startQuiz();
+function showStart(){
+    startButton.setAttribute("class", "start")
+}
+
+function showScore(){
+    resetState();
+    // qBox.setAttribute("class", "hide")
+    
+    questionElement.innerHTML = 'You scored ${score} out of ${questions.length}';
+    nextButton.innerHTML = "Play again yay";
+    nextButton.onclick = showStart
+    nextButton.style.display = "block";
+}
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+});
+qBox.setAttribute("class", "hide")
+
+function endQuiz(){
+    console.log("It's over")
+}
+
+
+startButton.onclick = startQuiz
+// startQuiz();
 

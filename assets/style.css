@@ -17,6 +17,25 @@ body {
     padding-left: 15px; */
 /* } */
 
+.hide {
+    display: none;
+}
+
+/* #qbox {
+    display:none;
+} */
+
+#start, button {
+    background: #C2DBE0;
+    width: 100%;
+    max-width: 300px;
+    margin: 60px auto 0;
+    border-radius: 100px;
+    padding: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .qbox {
     background: #CBC9BC;
     width: 90%;
@@ -54,9 +73,12 @@ body {
     cursor: pointer;
     transition: all;
 }
-.btn:hover {
+.btn:hover:not([disabled]) {
     background: #e5d4a5f6;
     color: #492516;
+}
+.btn:disabled {
+    cursor:no-drop;
 }
 #nextbtn  {
     background: #6D7647;
@@ -68,7 +90,7 @@ body {
     padding: 10px;
     margin: 20px auto 0;
     border-radius: 4px;
-    cursor: grab;
+    cursor: pointer;
     display: block;
     align-items: center;
 }
